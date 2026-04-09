@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://1dtyvksgfmjb"]
+
+[ext_resource type="PackedScene" uid="uid://c412wde04rrbq" path="res://Personajes/Warrior.tscn" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://coucwmyyt4e68" path="res://Personajes/RedLancer.tscn" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://xmpf3qnbw5hx" path="res://Personajes/Boss.tscn" id="3_tlwt5"]
+
+[node name="World" type="Node2D" unique_id=1936477324]
+
+[node name="Warrior" parent="." unique_id=8187155 instance=ExtResource("1_fj7yv")]
+position = Vector2(84, -85)
+
+[node name="Camera2D" type="Camera2D" parent="Warrior" unique_id=1856467498]
+position = Vector2(11, 16)
+zoom = Vector2(3, 3)
+
+[node name="RedLancer" parent="." unique_id=1393388537 instance=ExtResource("2_tlwt5")]
+position = Vector2(188, -81)
+
+[node name="RedLancer2" parent="." unique_id=2027530973 instance=ExtResource("3_tlwt5")]
+position = Vector2(203, -151)

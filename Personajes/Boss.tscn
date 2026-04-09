@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://xmpf3qnbw5hx"]
+
+[ext_resource type="Script" uid="uid://bquq3owrjd7fq" path="res://Clases/Boss.cs" id="1_cnst8"]
+[ext_resource type="Texture2D" uid="uid://c5cdx3i34d053" path="res://Tiny Swords (Free Pack)/Units/Red Units/Monk/Idle.png" id="2_cnst8"]
+[ext_resource type="Texture2D" uid="uid://do07mjfakijil" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Bars/SmallBar_Base3.png" id="3_qfyfo"]
+[ext_resource type="Texture2D" uid="uid://dtqf3b78ooqhm" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Bars/SmallBar_Fill.png" id="4_a80t0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fyvj2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4t15"]
+atlas = ExtResource("2_cnst8")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhedl"]
+atlas = ExtResource("2_cnst8")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o61cn"]
+atlas = ExtResource("2_cnst8")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1htoc"]
+atlas = ExtResource("2_cnst8")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqb2f"]
+atlas = ExtResource("2_cnst8")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6roc"]
+atlas = ExtResource("2_cnst8")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vemru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4t15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhedl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o61cn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1htoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqb2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6roc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boss" type="CharacterBody2D" unique_id=8187155]
+script = ExtResource("1_cnst8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1857110225]
+shape = SubResource("CapsuleShape2D_fyvj2")
+
+[node name="Animator" type="AnimatedSprite2D" parent="." unique_id=1004438866]
+position = Vector2(-1.1920929e-07, 3)
+scale = Vector2(0.31510416, 0.31510416)
+sprite_frames = SubResource("SpriteFrames_vemru")
+frame = 3
+frame_progress = 0.8619033
+
+[node name="HealthBar" type="Node2D" parent="." unique_id=681996356]
+
+[node name="HealthBarSprite" type="Sprite2D" parent="HealthBar" unique_id=1489622914]
+position = Vector2(-5.4642916, 21.75)
+scale = Vector2(0.23214276, 0.23214276)
+texture = ExtResource("3_qfyfo")
+
+[node name="BarFill" type="Sprite2D" parent="HealthBar" unique_id=2100679369]
+position = Vector2(-5.473215, 22)
+scale = Vector2(0.26478794, 0.24832593)
+texture = ExtResource("4_a80t0")

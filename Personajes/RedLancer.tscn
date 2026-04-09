@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://coucwmyyt4e68"]
+
+[ext_resource type="Script" uid="uid://dyuo5krj7semh" path="res://Clases/Enemy.cs" id="1_qfi72"]
+[ext_resource type="Texture2D" uid="uid://b31mwnjeesr4t" path="res://Tiny Swords (Free Pack)/Units/Red Units/Lancer/Lancer_Idle.png" id="1_tft2o"]
+[ext_resource type="Texture2D" uid="uid://do07mjfakijil" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Bars/SmallBar_Base3.png" id="3_r0pb7"]
+[ext_resource type="Texture2D" uid="uid://dtqf3b78ooqhm" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Bars/SmallBar_Fill.png" id="4_vprkc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fyvj2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfi72"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt4bg"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0pb7"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vprkc"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1cjp"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52s0x"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nf1u"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(1920, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5u0l"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(2240, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1trj"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(2560, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3kil"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(2880, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i72v"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(3200, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5j2g"]
+atlas = ExtResource("1_tft2o")
+region = Rect2(3520, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vemru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfi72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt4bg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0pb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vprkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1cjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52s0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nf1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5u0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1trj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3kil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i72v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5j2g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RedLancer" type="CharacterBody2D" unique_id=8187155]
+script = ExtResource("1_qfi72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1857110225]
+shape = SubResource("CapsuleShape2D_fyvj2")
+
+[node name="Animator" type="AnimatedSprite2D" parent="." unique_id=1004438866]
+position = Vector2(-4.7683716e-07, -2)
+scale = Vector2(0.31510416, 0.31510416)
+sprite_frames = SubResource("SpriteFrames_vemru")
+frame_progress = 0.021040829
+
+[node name="HealthBar" type="Node2D" parent="." unique_id=1632528161]
+
+[node name="HealthBarSprite" type="Sprite2D" parent="HealthBar" unique_id=754966089]
+position = Vector2(3.4999988, 20.28)
+scale = Vector2(0.26999998, 0.26999995)
+texture = ExtResource("3_r0pb7")
+
+[node name="BarFill" type="Sprite2D" parent="HealthBar" unique_id=2069739413]
+position = Vector2(-7, 10)
+scale = Vector2(0.296875, 0.328125)
+texture = ExtResource("4_vprkc")
+centered = false
